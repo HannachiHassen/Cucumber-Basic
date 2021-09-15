@@ -6,7 +6,7 @@ import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = ".//Features//GoogleSearch.feature", 
+@CucumberOptions(features = {".//Features//GoogleSearch.feature", ".//Features//GoogleSearchDataDriven.feature" },
 					glue = "com.stepDefinitions", 
 					dryRun = false, 
 					monochrome = true, 

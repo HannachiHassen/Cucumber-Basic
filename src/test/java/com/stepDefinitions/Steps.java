@@ -26,7 +26,6 @@ public class Steps {
 	@Given("User Navigates to Google webapp")
 	public void user_navigates_to_google_webapp() {
 		driver.navigate().to("https://www.google.com/");
-		;
 	}
 
 	@When("user searches for a {string}")
