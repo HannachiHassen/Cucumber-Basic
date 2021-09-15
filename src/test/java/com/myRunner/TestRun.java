@@ -10,9 +10,7 @@ import io.cucumber.junit.CucumberOptions;
 					glue = "stepDefinitions", 
 					dryRun = false, 
 					monochrome = true, 
-					plugin = {"pretty", "html:target/cucumber-HTML_report", 
-								"junit:target/cucumber.xml", 
-								"json:target/cucumber.json", }
+					plugin = {"pretty", "html:target/cucumber-HTML_report", }
 				)
 
 public class TestRun {
