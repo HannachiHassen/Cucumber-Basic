@@ -17,15 +17,16 @@ public class Steps {
 	public WebDriver driver;
 
 	@Given("User open Chrome Browser")
-	public void user_opent_chrome_browser() {
+	public void user_open_chrome_browser() {
 		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\Drivers\\chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 	}
 
-	@When("User Navigates to Google webapp")
+	@Given("User Navigates to Google webapp")
 	public void user_navigates_to_google_webapp() {
 		driver.navigate().to("https://www.google.com/");
+		;
 	}
 
 	@When("user searches for a {string}")
@@ -35,10 +36,12 @@ public class Steps {
 			serachbox.clear();
 			serachbox.sendKeys(LambTest);
 		} catch (Exception e) {
-			System.out.println("Google serach text box not fount: " +e.getMessage());
+			System.out.println("Google serach text box not fount: " + e.getMessage());
 		}
-		((JavascriptExecutor)driver).executeScript("window.scrollBy(0,250)");
-		driver.findElement(By.xpath("//span[contains(text(),'LambdaTest')]")).click();
+		WebElement lambatest = driver.findElement(By.xpath("//span[contains(text(),'LambdaTest')]"));
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].scrollIntoView();", lambatest);
+		lambatest.click();
 	}
 
 	@When("click on serach button")
@@ -61,4 +64,5 @@ public class Steps {
 			}
 		});
 	}
+
 }
