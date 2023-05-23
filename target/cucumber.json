@@ -1,0 +1,114 @@
+[
+  {
+    "line": 15,
+    "elements": [
+      {
+        "start_timestamp": "2023-05-20T20:26:27.109Z",
+        "line": 21,
+        "name": "Google serach with scenario",
+        "description": "",
+        "id": "searching-google-should-return-the-name-of-the-query;google-serach-with-scenario",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 50492056400,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "User open Chrome Browser",
+            "match": {
+              "location": "com.stepDefinitions.Steps.user_open_chrome_browser()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 6603663100,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "User Navigates to Google webapp",
+            "match": {
+              "location": "com.stepDefinitions.Steps.user_navigates_to_google_webapp()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 989749100,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "user searches for a \"LambdaTest\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"LambdaTest\"",
+                  "offset": 20
+                }
+              ],
+              "location": "com.stepDefinitions.Steps.user_searches_for_a(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 404407700,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "click on serach button",
+            "match": {
+              "location": "com.stepDefinitions.Steps.click_on_serach_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "error_message": "org.openqa.selenium.TimeoutException: Expected condition failed: waiting for com.stepDefinitions.Steps$1@a619c2 (tried for 10 second(s) with 500 milliseconds interval)\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027HASSEN-HP\u0027, ip: \u0027192.168.209.1\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002717.0.6\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 113.0.5672.127, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\\Users\\HASSEN\\AppData\\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:54763}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}\nSession ID: 6fca37c3607550bdd3a552dd494c9ddb\r\n\tat org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)\r\n\tat org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)\r\n\tat com.stepDefinitions.Steps.the_page_should_start_with(Steps.java:65)\r\n\tat ✽.the page should start with \"LambdaTest\"(file:///C:/Users/HASSEN/eclipse-workspace/CucumberBasic/./Features/GoogleSearch.feature:26)\r\n",
+              "duration": 10511339200,
+              "status": "failed"
+            },
+            "line": 26,
+            "name": "the page should start with \"LambdaTest\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"LambdaTest\"",
+                  "offset": 27
+                }
+              ],
+              "location": "com.stepDefinitions.Steps.the_page_should_start_with(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@tag"
+          },
+          {
+            "name": "@tag1"
+          }
+        ]
+      }
+    ],
+    "name": "Searching Google should return the name of the query",
+    "description": "  In order to perform a sucessful Google serach\n\tAs a user\n\tI want to serach on Google webapp",
+    "id": "searching-google-should-return-the-name-of-the-query",
+    "keyword": "Feature",
+    "uri": "file:Features/GoogleSearch.feature",
+    "tags": [
+      {
+        "name": "@tag",
+        "type": "Tag",
+        "location": {
+          "line": 14,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
